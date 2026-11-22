@@ -13,6 +13,9 @@ No need to install it via `pip`, just import it using `import json`.
 Once the JSON is loaded into a variable (e.g., `data = json.loads(response.text)`):
 
 1. **Dictionaries `{}`:** Accessed via key → `data["key"]` or `data.get("key")` (safer, returns `None` instead of crashing with a `KeyError` if the key is missing).
+
+* **Nested dictionaries (safe chaining):** Use `{}` as a fallback default (`data.get("a", {}).get("b")`) so it returns an empty dictionary instead of `None`, avoiding an `AttributeError` if an intermediate key is missing.
+
 2. **Lists `[]`:** Accessed via index → `data[0]` or by iterating with a `for` loop:
 ```python
 for item in data["results"]:
