@@ -11,6 +11,8 @@ Welcome to my Web3 learning repository. This space collects my daily study notes
 | 01 | [HTTP Requests & Status Codes](./01-python-notes/day-01-requests.md) | Making GET requests, handling query parameters, and inspecting HTTP status codes in Python. |
 | 02 | [Parsing JSON Data](./01-python-notes/day-02-json_parsing.md) | Converting raw API responses into Python dictionaries and lists using the `json` module. |
 | 03 | [Type Hints & HTTP Error Handling](./01-python-notes/day-03-type_hints_and_errors.md) | Deducing function input/return types and distinguishing network exceptions (`Timeout`) from HTTP  status code (`429`). |
+| 04 | [Environment Variables & Time Module](./01-python-notes/day-04-env_and_time.md) | Protecting API keys using `.env` files and `python-dotenv`, and pacing automated polling loops with `time.sleep()`. |
+
 
 ## Roadmap & Tech Stack
 
