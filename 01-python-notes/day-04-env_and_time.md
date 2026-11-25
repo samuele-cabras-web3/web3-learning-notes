@@ -33,22 +33,22 @@ from dotenv import load_dotenv
 load_dotenv()
 
 def get_api_key() -> str:
-api_key: str | None = os.getenv("ETHERSCAN_API_KEY")
-if api_key is None:
-raise ValueError("Missing ETHERSCAN_API_KEY in .env file")
-return api_key
+    api_key: str | None = os.getenv("ETHERSCAN_API_KEY")
+    if api_key is None:
+        raise ValueError("Missing ETHERSCAN_API_KEY in .env file")
+    return api_key
 
 def start_polling(interval: int) -> None:
-key: str = get_api_key()
-print(f"API Key loaded successfully (starts with: {key[:4]}...)")
+    key: str = get_api_key()
+    print(f"API Key loaded successfully (starts with: {key[:4]}...)")
 
-try:
-while True:
-print("Fetching latest blockchain data...")
-# requests.get(...) will go here in Project 5
-time.sleep(interval)
-except KeyboardInterrupt:
-print("\nPolling stopped safely by user.")
+    try:
+        while True:
+            print("Fetching latest blockchain data...")
+            # requests.get(...) will go here in Project 5
+            time.sleep(interval)
+            except KeyboardInterrupt:
+            print("\nPolling stopped safely by user.")
 
 start_polling(5)
 ```
